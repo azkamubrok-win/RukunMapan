@@ -32,10 +32,15 @@
     const TURNSTILE_SHOW_ON_BERANDA = true; // muncul lalu hilang di beranda
 
     if (ENABLE_TURNSTILE) {
-      const s = document.createElement('script');
-      s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
-      s.async = true; s.defer = true;
-      document.head.appendChild(s);
+      // Delay load script Cloudflare sampai animasi beranda selesai
+      window.addEventListener('load', function(){
+        setTimeout(function(){
+          var s = document.createElement('script');
+          s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+          s.async = true; s.defer = true;
+          document.head.appendChild(s);
+        }, 2500); // tunggu 2.5 detik setelah load
+      });
     }
   </script>
   <style>
@@ -7778,31 +7783,33 @@ function sdgcSimpan(){
 (function(){
   if(!ENABLE_TURNSTILE || !TURNSTILE_SHOW_ON_BERANDA) return;
 
-  // Tampilkan widget 1.5 detik setelah halaman load
-  setTimeout(function(){
-    var wrap = document.getElementById('turnstile-beranda-wrap');
-    if(!wrap) return;
-    wrap.classList.add('ts-show');
+  // Tampilkan widget 3.5 detik setelah load — animasi beranda sudah selesai
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      var wrap = document.getElementById('turnstile-beranda-wrap');
+      if(!wrap) return;
+      wrap.classList.add('ts-show');
 
-    // Tunggu Turnstile siap lalu render
-    var tryRender = setInterval(function(){
-      if(typeof turnstile === 'undefined') return;
-      clearInterval(tryRender);
-      turnstile.render('#turnstile-beranda-widget', {
-        sitekey: TURNSTILE_SITE_KEY,
-        size: 'compact',
-        callback: function(){
-          // Verifikasi berhasil → tunggu 2 detik → fade out
-          setTimeout(function(){
-            wrap.classList.remove('ts-show');
-            wrap.classList.add('ts-hide');
-            setTimeout(function(){ wrap.style.display='none'; }, 500);
-          }, 2000);
-        }
-      });
-    }, 300);
+      // Tunggu script Cloudflare siap lalu render
+      var tryRender = setInterval(function(){
+        if(typeof turnstile === 'undefined') return;
+        clearInterval(tryRender);
+        turnstile.render('#turnstile-beranda-widget', {
+          sitekey: TURNSTILE_SITE_KEY,
+          size: 'compact',
+          callback: function(){
+            // Verifikasi berhasil → tunggu 2 detik → fade out
+            setTimeout(function(){
+              wrap.classList.remove('ts-show');
+              wrap.classList.add('ts-hide');
+              setTimeout(function(){ wrap.style.display='none'; }, 500);
+            }, 2000);
+          }
+        });
+      }, 300);
 
-  }, 1500);
+    }, 3500);
+  });
 })();
 </script>
 </body>
