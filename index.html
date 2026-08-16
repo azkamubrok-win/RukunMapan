@@ -470,13 +470,13 @@ ul{list-style:none}
 ============================================= */
 .fitur-content{padding:56px 0 80px}
 
-/* ── color classes ── */
+/* - color classes - */
 .ic1{background:#E8F4EF;color:#1B6B5A}.ic2{background:#FBF0DC;color:#C8963E}
 .ic3{background:#EBF3FF;color:#3A7BD5}.ic4{background:#FFF0E8;color:#E8703A}
 .ic5{background:#EEE8FF;color:#7B5EA7}.ic6{background:#E8FBF4;color:#22A97A}
 .ic7{background:#FFF4E8;color:#D4932A}
 
-/* ── Bento Grid wrapper ── */
+/* - Bento Grid wrapper - */
 .feat-bento{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -484,7 +484,7 @@ ul{list-style:none}
   margin-top:44px;
 }
 
-/* ── Base card ── */
+/* - Base card - */
 .fb-card{
   position:relative;overflow:hidden;
   background:var(--card);
@@ -663,7 +663,7 @@ ul{list-style:none}
 }
 .fb-card.wide:hover .fb-cta{background:rgba(255,255,255,.24)}
 
-/* ── Responsive ── */
+/* - Responsive - */
 @media(max-width:960px){
   .feat-bento{grid-template-columns:1fr 1fr}
   .fb-card.large{grid-column:1/-1}
@@ -922,10 +922,10 @@ footer{
    RESPONSIVE - COMPREHENSIVE
 ============================================= */
 
-/* ── Beranda preview cards (class-based grid) ── */
+/* - Beranda preview cards (class-based grid) - */
 .beranda-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 
-/* ── 1024px - tablet landscape ── */
+/* - 1024px - tablet landscape - */
 @media(max-width:1024px){
   .hero-inner{grid-template-columns:1fr;padding:64px 24px 72px}
   .hero-visual{order:-1}
@@ -939,7 +939,7 @@ footer{
   .beranda-cards-grid{grid-template-columns:1fr 1fr}
 }
 
-/* ── 768px - tablet portrait ── */
+/* - 768px - tablet portrait - */
 @media(max-width:768px){
   .nav-links,.nav-cta .btn-outline{display:none}
   .burger{display:flex}
@@ -957,7 +957,7 @@ footer{
   .misi-section{padding:0 0 52px}
 }
 
-/* ── 640px - large phone ── */
+/* - 640px - large phone - */
 @media(max-width:640px){
   .hero-inner{gap:36px;padding:48px 16px 60px}
   .hero-stats{gap:16px}
@@ -971,7 +971,7 @@ footer{
   .feat-bento{gap:12px}
 }
 
-/* ── 480px - standard phone ── */
+/* - 480px - standard phone - */
 @media(max-width:480px){
   /* loader */
   .ld-logo{font-size:2.1rem}
@@ -1017,12 +1017,12 @@ footer{
   .social-row{flex-wrap:wrap}
 }
 
-/* ── 420px - small phone ── */
+/* - 420px - small phone - */
 @media(max-width:420px){
   .nav-cta{display:none}
 }
 
-/* ── 360px - very small phone ── */
+/* - 360px - very small phone - */
 @media(max-width:360px){
   .hero-h1{font-size:1.85rem}
   .hero-vis-wrap{max-width:220px}
@@ -1040,7 +1040,7 @@ footer{
    ✨ EXPRESSIVE ENHANCEMENTS v10
 ============================================= */
 
-/* ─── AURORA ANIMATED BACKGROUND ─── */
+/* -─ AURORA ANIMATED BACKGROUND -─ */
 .hero-aurora{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .aurora-blob{
   position:absolute;border-radius:50%;filter:blur(72px);
@@ -1056,7 +1056,7 @@ footer{
   66%{transform:translate(-18px,22px) scale(.94)}
 }
 
-/* ─── HERO TITLE GRADIENT ANIMATION ─── */
+/* -─ HERO TITLE GRADIENT ANIMATION -─ */
 .hero-h1 .hl{
   background:linear-gradient(135deg,var(--p),#2ECC99,var(--p-light),var(--p));
   background-size:300% 300%;
@@ -1071,7 +1071,7 @@ footer{
 }
 @keyframes gradShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 
-/* ─── GLASSMORPHISM FLOAT CARDS ─── */
+/* -─ GLASSMORPHISM FLOAT CARDS -─ */
 .float-card{
   background:rgba(255,255,255,.85)!important;
   backdrop-filter:blur(20px)!important;-webkit-backdrop-filter:blur(20px)!important;
@@ -1085,14 +1085,14 @@ footer{
 @keyframes fltB{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(-12px) rotate(-1deg)}}
 @keyframes fltC{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-8px) rotate(2deg)}}
 
-/* ─── HERO PRIMARY BUTTON PULSE ─── */
+/* -─ HERO PRIMARY BUTTON PULSE -─ */
 .hero-cta{animation:heroPulse 3.5s ease-in-out infinite!important}
 @keyframes heroPulse{
   0%,100%{box-shadow:0 4px 16px rgba(27,107,90,.3)}
   50%{box-shadow:0 8px 36px rgba(27,107,90,.55),0 0 0 10px rgba(27,107,90,.07)}
 }
 
-/* ─── HERO VISUAL MORPH RING ─── */
+/* -─ HERO VISUAL MORPH RING -─ */
 .hero-morph-ring{
   position:absolute;inset:-8%;border-radius:50%;
   background:linear-gradient(135deg,rgba(27,107,90,.06),rgba(200,150,62,.04));
@@ -1107,12 +1107,12 @@ footer{
 }
 .hero-vis-wrap{position:relative}
 
-/* ─── ROTATING STAR DECO IN SVG ─── */
+/* -─ ROTATING STAR DECO IN SVG -─ */
 .star-spin{animation:starSpin 20s linear infinite;transform-origin:250px 250px}
 .star-spin-r{animation:starSpin 14s linear infinite reverse;transform-origin:250px 250px}
 @keyframes starSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 
-/* ─── SCROLL REVEAL ─── */
+/* -─ SCROLL REVEAL -─ */
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .75s cubic-bezier(.4,0,.2,1),transform .75s cubic-bezier(.4,0,.2,1)}
 .reveal.in{opacity:1;transform:none}
 .reveal-l{opacity:0;transform:translateX(-36px);transition:opacity .7s ease,transform .7s ease}
@@ -1124,7 +1124,7 @@ footer{
 .d1{transition-delay:.1s}.d2{transition-delay:.18s}.d3{transition-delay:.26s}
 .d4{transition-delay:.34s}.d5{transition-delay:.42s}
 
-/* ─── ENHANCED BERANDA CARDS ─── */
+/* -─ ENHANCED BERANDA CARDS -─ */
 .bcard{
   position:relative;background:var(--card);border-radius:var(--r-lg);
   padding:30px;cursor:pointer;overflow:hidden;
@@ -1163,7 +1163,7 @@ footer{
 }
 .bcard:hover .bcard-link{gap:11px;color:var(--p-dark)}
 
-/* ─── FEATURE CHIPS ─── */
+/* -─ FEATURE CHIPS -─ */
 .feat-chips{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0}
 .feat-chip{
   display:inline-flex;align-items:center;gap:6px;padding:6px 13px;
@@ -1181,19 +1181,19 @@ footer{
 .feat-chip:hover{background:var(--p);color:#fff;border-color:var(--p);transform:translateY(-2px)}
 .feat-chip i{font-size:.65rem}
 
-/* ─── STAT GRADIENT TEXT ─── */
+/* -─ STAT GRADIENT TEXT -─ */
 .stat-num{
   background:linear-gradient(135deg,var(--p),var(--p-light));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 
-/* ─── ENHANCED CTA STRIP ─── */
+/* -─ ENHANCED CTA STRIP -─ */
 .cta-strip{background:linear-gradient(135deg,#0D3D2F,var(--p-dark),var(--p),var(--p-light));background-size:300% 300%;animation:ctaGrad 8s ease infinite}
 @keyframes ctaGrad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 .cta-top-wave{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--gold-l),var(--gold),var(--gold-l));background-size:200% 100%;animation:waveShift 2.5s linear infinite}
 @keyframes waveShift{from{background-position:0%}to{background-position:200%}}
 
-/* ─── SCROLL INDICATOR ─── */
+/* -─ SCROLL INDICATOR -─ */
 .scroll-indicator{
   position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
   display:flex;flex-direction:column;align-items:center;gap:7px;
@@ -1208,13 +1208,13 @@ footer{
 @keyframes scrollBounce{0%{transform:translateY(0);opacity:1}80%{transform:translateY(12px);opacity:0}100%{transform:translateY(0);opacity:0}}
 .scroll-indicator span{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
-/* ─── SECTION HEADER DECORATIVE ─── */
+/* -─ SECTION HEADER DECORATIVE -─ */
 .section-header{text-align:center;margin-bottom:52px}
 .eyebrow-wrap{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px}
 .eyebrow-line{width:36px;height:1.5px;background:linear-gradient(90deg,transparent,var(--gold))}
 .eyebrow-line.rev{background:linear-gradient(90deg,var(--gold),transparent)}
 
-/* ─── MISI CARD ENHANCED ─── */
+/* -─ MISI CARD ENHANCED -─ */
 .misi-card{
   position:relative;overflow:hidden;
   transition:transform .4s cubic-bezier(.4,0,.2,1),box-shadow .4s ease,border-color .4s ease;
@@ -1229,36 +1229,36 @@ footer{
 .misi-card .mc-icon{transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
 .misi-card:hover .mc-icon{transform:scale(1.15) rotate(-8deg)}
 
-/* ─── VALUE ITEM ENHANCED ─── */
+/* -─ VALUE ITEM ENHANCED -─ */
 .value-item{transition:transform .35s ease,border-color .35s ease,background .35s ease,box-shadow .35s ease}
 .value-item:hover{transform:translateX(6px);box-shadow:var(--sh-sm)}
 .vi-icon{transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
 .value-item:hover .vi-icon{transform:scale(1.15) rotate(-5deg)}
 
-/* ─── STEP ENHANCED ─── */
+/* -─ STEP ENHANCED -─ */
 .step{transition:background .3s ease,transform .3s ease}
 .step:hover{background:var(--bg-alt);transform:translateX(5px)}
 
-/* ─── FAQ ENHANCED ─── */
+/* -─ FAQ ENHANCED -─ */
 .faq-item{transition:border-color .3s ease,box-shadow .3s ease}
 .faq-item:hover:not(.open){box-shadow:var(--sh-sm)}
 
-/* ─── FOOTER BRAND ICON GLOW ─── */
+/* -─ FOOTER BRAND ICON GLOW -─ */
 .nav-logo-icon,.ft-logo-ico{transition:box-shadow .3s ease,transform .3s ease}
 .nav-logo:hover .nav-logo-icon{transform:scale(1.08) rotate(-5deg);box-shadow:0 6px 20px rgba(27,107,90,.4)}
 
-/* ─── HERO VISUAL FLOAT ANIMATION ─── */
+/* -─ HERO VISUAL FLOAT ANIMATION -─ */
 .hero-svg-house{animation:houseFloat 5s ease-in-out infinite;transform-origin:250px 340px}
 @keyframes houseFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 
-/* ─── SOCIAL BTN GLOW ─── */
+/* -─ SOCIAL BTN GLOW -─ */
 .soc-btn:hover,.ft-soc-btn:hover{box-shadow:0 4px 16px rgba(27,107,90,.3)}
 
-/* ─── MODAL PANEL ENHANCED ─── */
+/* -─ MODAL PANEL ENHANCED -─ */
 .detail-box{box-shadow:0 40px 100px rgba(0,0,0,.25),0 0 0 1px rgba(255,255,255,.05)}
 .auth-box{box-shadow:0 40px 100px rgba(0,0,0,.25)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-/* ── Auth modal overrides ── */
+/* - Auth modal overrides - */
 #authBox{max-height:min(90vh,580px);overflow-y:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r-xl)}
 #authBox::-webkit-scrollbar{width:4px}
 #authBox::-webkit-scrollbar-track{background:transparent}
@@ -1266,34 +1266,34 @@ footer{
 #authPanel{align-items:center;padding:12px}
 @media(max-height:640px){#authBox{max-height:92vh}}
 
-/* ─── PAGE TRANSITION ─── */
+/* -─ PAGE TRANSITION -─ */
 .page.active{animation:pgIn .42s cubic-bezier(.4,0,.2,1)}
 @keyframes pgIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
-/* ─── SCROLL-TO-TOP ENHANCED ─── */
+/* -─ SCROLL-TO-TOP ENHANCED -─ */
 #scrollTopBtn{transition:all .35s cubic-bezier(.4,0,.2,1)}
 #scrollTopBtn.vis{animation:stbIn .4s cubic-bezier(.34,1.56,.64,1)}
 @keyframes stbIn{from{opacity:0;transform:translateY(20px) scale(.7)}to{opacity:1;transform:none}}
 #scrollTopBtn:hover{background:var(--p-dark);transform:translateY(-4px) scale(1.1);box-shadow:0 8px 24px rgba(27,107,90,.5)}
 
-/* ─── HERO 3RD FLOAT CARD ─── */
+/* -─ HERO 3RD FLOAT CARD -─ */
 .fc-c{top:52%;left:-7%;padding:9px 13px;font-size:.75rem}
 
-/* ─── RIPPLE ENHANCED ─── */
+/* -─ RIPPLE ENHANCED -─ */
 .ripple{background:rgba(255,255,255,.32)!important;animation:rpl .6s linear!important}
 
-/* ─── SECTION BG TRANSITION ─── */
+/* -─ SECTION BG TRANSITION -─ */
 .section-white{background:#fff}
 .section-alt{background:linear-gradient(180deg,var(--bg-alt) 0%,#fff 100%)}
 
 
-/* ─── MAKNA PERNIKAHAN PAGE ─── */
+/* -─ MAKNA PERNIKAHAN PAGE -─ */
 .mk-tab-content{animation:pgIn .32s ease}
 
-/* ─── SUB FITUR PANEL (stacks above detail panel) ─── */
+/* -─ SUB FITUR PANEL (stacks above detail panel) -─ */
 #subFiturPanel{z-index:1200}
 
-/* ─── SUB FITUR TAB BAR - PILL LIST ─── */
+/* -─ SUB FITUR TAB BAR - PILL LIST -─ */
 .sf-grid{
   display:flex;flex-wrap:nowrap;gap:8px;padding:12px 0;
   overflow-x:auto;-webkit-overflow-scrolling:touch;
@@ -1323,7 +1323,7 @@ footer{
   .sf-card{flex:0 0 auto;padding:9px 14px}
 }
 
-/* ─── SUB FITUR PILL LIST ─── */
+/* -─ SUB FITUR PILL LIST -─ */
 .sf-pill-wrap{display:flex;flex-wrap:wrap;gap:9px}
 .sf-pill{
   display:inline-flex;align-items:center;gap:9px;
@@ -1341,7 +1341,7 @@ footer{
 .sf-pill-label{font-size:.82rem;font-weight:700;color:var(--txt);white-space:nowrap}
 .sf-pill i.sf-pill-arrow{font-size:.65rem;color:var(--muted);margin-left:2px}
 
-/* ─── SDG PROFILE CARD (Ringkasan Profil) ─── */
+/* -─ SDG PROFILE CARD (Ringkasan Profil) -─ */
 .sdg-profile-card{background:var(--card);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-md);margin-bottom:14px}
 .spc-banner{background:linear-gradient(135deg,var(--p-dark),var(--p-light));padding:26px 20px 18px;display:flex;align-items:center;gap:14px;position:relative;overflow:hidden}
 .spc-banner::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23fff' stroke-width='0.5' opacity='0.1'%3E%3Cpolygon points='40,4 52,16 64,4 64,28 76,40 64,52 64,76 52,64 40,76 28,64 16,76 16,52 4,40 16,28 16,4 28,16'/%3E%3C/g%3E%3C/svg%3E");background-size:80px 80px;pointer-events:none}
@@ -1382,7 +1382,7 @@ footer{
 .sdg-update-btn{width:100%;padding:12px;border:1.5px solid var(--border);border-radius:var(--r-md);background:#fff;font-family:var(--ff);font-size:.83rem;font-weight:600;color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:var(--tr)}
 .sdg-update-btn:hover{border-color:var(--p);color:var(--p)}
 
-/* ─── RINGKASAN VISUAL DASHBOARD ─── */
+/* -─ RINGKASAN VISUAL DASHBOARD -─ */
 .rvd-wrap{display:flex;flex-direction:column;gap:14px}
 .rvd-hero{background:linear-gradient(135deg,var(--p-dark) 0%,var(--p) 55%,#2d9b6f 100%);border-radius:var(--r-xl);padding:22px 20px 18px;position:relative;overflow:hidden}
 .rvd-hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23fff' stroke-width='0.4' opacity='0.08'%3E%3Cpolygon points='40,4 52,16 64,4 64,28 76,40 64,52 64,76 52,64 40,76 28,64 16,76 16,52 4,40 16,28 16,4 28,16'/%3E%3C/g%3E%3C/svg%3E");background-size:80px 80px;pointer-events:none}
@@ -1434,7 +1434,7 @@ footer{
 .rvd-quote p{font-family:var(--fs);font-style:italic;color:var(--txt);font-size:.83rem;line-height:1.75;margin:0 0 6px;padding-left:4px}
 .rvd-quote span{font-size:.65rem;font-weight:700;color:var(--gold);letter-spacing:.07em;text-transform:uppercase}
 
-/* ─── SDG KOMITMEN FORM ─── */
+/* -─ SDG KOMITMEN FORM -─ */
 .sdgk-deklarasi{background:linear-gradient(135deg,#E8F4EF,#F0FAF5);border:1.5px solid rgba(27,107,90,.18);border-radius:var(--r-lg);padding:20px;margin-bottom:18px;display:flex;gap:14px;align-items:flex-start}
 .sdgk-dek-icon{width:44px;height:44px;min-width:44px;border-radius:12px;background:rgba(27,107,90,.12);color:var(--p);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
 .sdgk-dek-label{font-size:.68rem;font-weight:800;color:var(--p);text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px}
@@ -1833,7 +1833,7 @@ footer{
   <section class="fitur-content">
     <div class="container">
 
-      <!-- ── BENTO GRID ── -->
+      <!-- - BENTO GRID - -->
       <div class="feat-bento">
 
         <!-- 01 - LARGE HERO CARD -->
@@ -2562,7 +2562,7 @@ footer{
           </button>
         </div>
 
-        <!-- ── Navigasi ke Rencanakan Masa Depan ── -->
+        <!-- - Navigasi ke Rencanakan Masa Depan - -->
         <div id="ck-nav-masa-depan" style="display:none;background:linear-gradient(135deg,#0D4F3C,#1B6B5A);border-radius:var(--r-lg);padding:22px 24px;text-align:center;position:relative;overflow:hidden">
           <!-- dekorasi bulat -->
           <div style="position:absolute;top:-24px;right:-24px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,.06)"></div>
@@ -2585,7 +2585,7 @@ footer{
     <div id="sbTab-rencanakan-masa-depan" style="display:none">
 
       <style>
-        /* ── Accordion investasi & keluarga (pola kalkulator nikah) ── */
+        /* - Accordion investasi & keluarga (pola kalkulator nikah) - */
         .proj-section{background:#fff;border:1.5px solid var(--border);border-radius:var(--r-md);overflow:hidden}
         .proj-section-head{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;gap:10px;padding:16px 18px}
         .proj-section-head:hover{background:var(--bg-alt)}
@@ -4005,7 +4005,7 @@ footer{
 ========================================= -->
 <div class="page" id="page-modul-edukasi">
 
-  <!-- ── HEADER HERO ── -->
+  <!-- - HEADER HERO - -->
   <div style="background:linear-gradient(135deg,#1A5C7A,#22A97A);padding:96px 0 40px;text-align:center;position:relative;overflow:hidden">
     <div class="geo-bg" style="opacity:.18"></div>
     <div class="container" style="position:relative;z-index:1">
@@ -4020,7 +4020,7 @@ footer{
     </div>
   </div>
 
-  <!-- ── TAB NAVIGASI ── -->
+  <!-- - TAB NAVIGASI - -->
   <div style="background:#fff;border-bottom:1px solid var(--border);position:sticky;top:76px;z-index:100">
     <div class="container">
       <div class="edu-tabs" style="display:flex;gap:8px;padding:10px 0">
@@ -4172,7 +4172,7 @@ footer{
   </div>
 </div><!-- /page-modul-edukasi -->
 
-<!-- ── READER OVERLAY: Modul Edukasi ── -->
+<!-- - READER OVERLAY: Modul Edukasi - -->
 <div id="eduReaderOv" style="display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.97);flex-direction:column">
   <style>
     #eduReaderOv { display:none; flex-direction:column; }
@@ -4779,7 +4779,7 @@ const pages = ['beranda','tentang','fitur','cara-kerja','kontak','roadmap','sdg'
 let currentPage = 'beranda';
 
 function goPage(id){
-  // ── Feature gate check ──
+  // - Feature gate check -
   if(!rmCheckGate(id)) return;
   // Track visited gated pages (for gate logic)
   if(GATE_PAGES.includes(id)) _visitedFeatures.add(id);
@@ -5424,7 +5424,7 @@ function openSubFitur(id){
     const rmChecked = document.querySelectorAll('#rmTab-timeline input[type=checkbox]:checked').length;
     const rmTotal   = document.querySelectorAll('#rmTab-timeline input[type=checkbox]').length;
 
-    /* ── Computed values for sub-panel ── */
+    /* - Computed values for sub-panel - */
     const rpInitials=nama.split(' ').filter(Boolean).slice(0,2).map(w=>w[0].toUpperCase()).join('')||'?';
     const rpRmPct=rmTotal>0?Math.round(rmChecked/rmTotal*100):0;
     const rpSdgPct=Math.round(sdgList.length/5*100);
@@ -5709,11 +5709,11 @@ const RM_EMAIL_REGEX = /^[^\s@<>"']+@[^\s@<>"']+\.[^\s@<>"']+$/;
    AUTH SYSTEM - Supabase
 ============================================ */
 
-// ── Feature gate tracking ──
+// - Feature gate tracking -
 let _visitedFeatures = new Set();
 const GATE_PAGES = ['makna-pernikahan','pendaftaran-nikah','simulasi-biaya-nikah','roadmap','sdg'];
 
-// ── Current user state ──
+// - Current user state -
 let rmCurrentUser = null;
 
 async function rmInitSession(){
@@ -5776,7 +5776,7 @@ function toggleUserMenu(e){
 }
 document.addEventListener('click', ()=>{ const d=document.getElementById('userMenuDrop'); if(d) d.style.display='none'; });
 
-// ── openAuth (entry point) ──
+// - openAuth (entry point) -
 let _authGateMode = false; // true when triggered by feature gate
 
 function openAuth(type, gateMsg){
@@ -5828,7 +5828,7 @@ function showAuthErr(id, msg){
   el.style.display='block';
 }
 
-// ── Register ──
+// - Register -
 async function doRegister(){
   const nama  = document.getElementById('regNama').value.trim();
   const email = document.getElementById('regEmail').value.trim().toLowerCase();
@@ -5853,7 +5853,7 @@ async function doRegister(){
   ['regNama','regEmail','regPass'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; });
 }
 
-// ── Login ──
+// - Login -
 async function doLogin(){
   const email = document.getElementById('loginEmail').value.trim().toLowerCase();
   const pass  = document.getElementById('loginPass').value;
@@ -5878,7 +5878,7 @@ async function doLogin(){
   loadSimulasi(); // Restore data kalkulator dari Supabase setelah login
 }
 
-// ── Logout ──
+// - Logout -
 async function doLogout(){
   await _sb.auth.signOut();
   rmCurrentUser = null;
@@ -5888,7 +5888,7 @@ async function doLogout(){
   showToast('Anda telah keluar. Sampai jumpa! 👋');
 }
 
-// ── Feature gate check ──
+// - Feature gate check -
 // Called before navigating to a feature page
 // Returns true if allowed, false if blocked (and opens auth)
 function rmCheckGate(pageId){
@@ -5911,7 +5911,7 @@ function rmCheckGate(pageId){
   return true; // revisiting same page → allow
 }
 
-// ── Legacy submitAuth (fallback, tidak dipakai lagi) ──
+// - Legacy submitAuth (fallback, tidak dipakai lagi) -
 function submitAuth(){ doRegister(); }
 
 /* ============================================
@@ -6457,7 +6457,7 @@ window.goPage = function(id){
 };
 
 // Kalkulator functions
-/* ── KALKULATOR NIKAH: toggle section ── */
+/* - KALKULATOR NIKAH: toggle section - */
 function toggleCkSection(key){
   const body = document.getElementById('body-'+key);
   const tog  = document.getElementById('tog-'+key);
@@ -6476,7 +6476,7 @@ function toggleProjSection(key){
   if(tog) tog.style.transform = open ? '' : 'rotate(180deg)';
 }
 
-/* ── FORMAT RUPIAH INPUT ── */
+/* - FORMAT RUPIAH INPUT - */
 function parseRp(id){
   const el = document.getElementById(id);
   if(!el) return 0;
@@ -6499,7 +6499,7 @@ function fmtRp(el){
   }catch(e){}
 }
 
-/* ── KALKULATOR NIKAH: hitung total ── */
+/* - KALKULATOR NIKAH: hitung total - */
 function hitungTotal(){
   const rp = id => parseRp(id);
 
@@ -6633,7 +6633,7 @@ function hitungTotal(){
   }
 }
 
-/* ── SIMPAN & LOAD SIMULASI BIAYA ke Supabase ── */
+/* - SIMPAN & LOAD SIMULASI BIAYA ke Supabase - */
 let _ckSaveTimer = null;
 
 // Kumpulkan semua nilai input kalkulator jadi satu objek JSON
@@ -6705,7 +6705,7 @@ async function loadSimulasi(){
   if(data?.data) _ckRestoreData(data.data);
 }
 
-/* ── KALKULATOR BUNGA PINJAMAN ── */
+/* - KALKULATOR BUNGA PINJAMAN - */
 function hitungBunga(){
   const pokok  = window._ckHutang || 0;
   const bunga  = parseFloat(document.getElementById('ck-bunga')?.value) || 0;
@@ -6733,7 +6733,7 @@ function hitungBunga(){
   }
 }
 
-/* ── NAVIGASI DARI KALKULATOR → RENCANAKAN MASA DEPAN ── */
+/* - NAVIGASI DARI KALKULATOR → RENCANAKAN MASA DEPAN - */
 function navigasiMasaDepan(){
   // ambil total dari kalkulator
   const rp = id => parseRp(id);
@@ -6774,7 +6774,7 @@ function navigasiMasaDepan(){
   }, 280);
 }
 
-/* ── DATA SAHAM (Low/Medium/High Risk) - total return tahunan (CAGR + dividen), sumber Google Finance Agu 2026 ── */
+/* - DATA SAHAM (Low/Medium/High Risk) - total return tahunan (CAGR + dividen), sumber Google Finance Agu 2026 - */
 const SAHAM_LIST = [
   {code:'indf', rate:0.0345 + 0.0393},
   {code:'mapi', rate:0.1679 + 0.0066},
@@ -6806,7 +6806,7 @@ function hitungSahamList(modal, tahun, fmt, prefix){
   return results;
 }
 
-/* ── PROYEKSI INVESTASI ── */
+/* - PROYEKSI INVESTASI - */
 function hitungProyeksi(){
   const modal  = parseRp('proj-modal');
   const tahun  = parseFloat(document.getElementById('proj-tahun')?.value) || 5;
@@ -6852,7 +6852,7 @@ function hitungProyeksi(){
   document.getElementById('proj-emas-total').textContent = fmt(emasTotal);
   document.getElementById('proj-emas-untung').textContent= fmt(emasTotal - modal);
 
-  // ── Update summary card ──
+  // - Update summary card -
   const sumCard = document.getElementById('proj-summary-card');
   if(sumCard && modal > 0){
     sumCard.style.display = 'block';
@@ -6882,7 +6882,7 @@ function hitungProyeksi(){
     sumCard.style.display = 'none';
   }
 
-  // ── Auto-open semua accordion investasi ──
+  // - Auto-open semua accordion investasi -
   ['saham','sh-low','sh-mid','sh-high','sr','rdm','emas'].forEach(key => {
     const body = document.getElementById('body-'+key);
     const tog  = document.getElementById('tog-'+key);
@@ -6893,7 +6893,7 @@ function hitungProyeksi(){
   });
 }
 
-/* ── PROYEKSI INVESTASI (ROADMAP) ── */
+/* - PROYEKSI INVESTASI (ROADMAP) - */
 function hitungProyeksiRm(){
   const modalEl = document.getElementById('rm-proj-modal');
   if(!modalEl) return;
@@ -6994,7 +6994,7 @@ function toggleProjSectionRm(key){
   if(tog) tog.style.transform=open?'':'rotate(180deg)';
 }
 
-/* ── RESET KALKULATOR ── */
+/* - RESET KALKULATOR - */
 function resetKalkulator(){
   const allIds = [
     'ck-tgl','ck-gaji','ck-tabungan','ck-persen',
@@ -7017,7 +7017,7 @@ function resetKalkulator(){
   hitungTotal();
 }
 
-/* ── ROADMAP PAGE - tab switching ── */
+/* - ROADMAP PAGE - tab switching - */
 function switchRoadmapTab(id){
   ['timeline','perencanaan','alokasi'].forEach(t=>{
     const el=document.getElementById('rmTab-'+t);
@@ -7062,7 +7062,7 @@ function switchRoadmapTab(id){
   }
 }
 
-/* ── MODUL EDUKASI TAB SWITCHER ── */
+/* - MODUL EDUKASI TAB SWITCHER - */
 function switchEduTab(id){
   ['modul','live'].forEach(t=>{
     const el=document.getElementById('eduTab-'+t);
@@ -7100,7 +7100,7 @@ function switchEduTab(id){
   });
 }
 
-/* ── ALOKASI KEUANGAN ── */
+/* - ALOKASI KEUANGAN - */
 function akFormat(el){
   const raw = el.value.replace(/\D/g,'');
   el.value = raw ? parseInt(raw,10).toLocaleString('id-ID') : '';
@@ -7229,7 +7229,7 @@ function akHitung(){
   window._akPrevGaji = gaji;
 }
 
-/* ── ROADMAP PAGE - checklist persistence ── */
+/* - ROADMAP PAGE - checklist persistence - */
 async function rm10pSave(){
   const cbs=document.querySelectorAll('#rmTab-timeline input[type=checkbox]');
   cbs.forEach((c,i)=>sessionStorage.setItem('rm10p_'+i,c.checked?'1':'0'));
@@ -7261,7 +7261,7 @@ async function rm10pRestore(){
   cbs.forEach((c,i)=>{ if(sessionStorage.getItem('rm10p_'+i)==='1') c.checked=true; });
 }
 
-/* ── SDG KOMITMEN: canvas tanda tangan ── */
+/* - SDG KOMITMEN: canvas tanda tangan - */
 let _sdgcCtx = null, _sdgcDrawing = false, _sdgcHasMark = false;
 
 function sdgcInitCanvas(){
@@ -7312,7 +7312,7 @@ function sdgcResetSign(){
   openSubFitur('sdg-komitmen');
 }
 
-/* ── SDG PAGE functions ── */
+/* - SDG PAGE functions - */
 let _sdgcpCtx=null,_sdgcpDrawing=false,_sdgcpHasMark=false;
 function sdgcpInitCanvas(){
   const canvas=document.getElementById('sdgcpCanvas');
@@ -7664,7 +7664,7 @@ function sdgcSimpan(){
   }
 }
 
-/* ── SCROLL-HIDE: sub-fitur tab bar ── */
+/* - SCROLL-HIDE: sub-fitur tab bar - */
 (function(){
   let lastY = 0, ticking = false;
   const HIDE_THRESHOLD  = 30;   // px scroll-down sebelum sembunyi
