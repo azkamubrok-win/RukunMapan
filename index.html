@@ -29,6 +29,7 @@
        ============================================================ */
     const ENABLE_TURNSTILE = true;
     const TURNSTILE_SITE_KEY = '0x4AAAAAAERQdMmvo9fHLf0T';
+    const TURNSTILE_SHOW_ON_BERANDA = true; // muncul lalu hilang di beranda
 
     if (ENABLE_TURNSTILE) {
       const s = document.createElement('script');
@@ -38,6 +39,26 @@
     }
   </script>
   <style>
+/* =============================================
+   TURNSTILE FLOATING (BERANDA)
+============================================= */
+#turnstile-beranda-wrap{
+  position:fixed;bottom:24px;right:24px;z-index:9999;
+  background:#fff;border-radius:12px;
+  box-shadow:0 4px 24px rgba(0,0,0,.13);
+  padding:12px 16px 10px;
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  opacity:0;transform:translateY(16px);
+  transition:opacity .4s ease,transform .4s ease;
+  pointer-events:none;
+}
+#turnstile-beranda-wrap.ts-show{opacity:1;transform:translateY(0);pointer-events:auto;}
+#turnstile-beranda-wrap.ts-hide{opacity:0;transform:translateY(16px);}
+#turnstile-beranda-wrap p{
+  font-size:.7rem;color:#666;margin:0;
+  font-family:'Plus Jakarta Sans',sans-serif;
+}
+
 /* =============================================
    TOKENS
 ============================================= */
@@ -7741,6 +7762,44 @@ function sdgcSimpan(){
     if(sh) sh.setAttribute('opacity','0');
   };
   probe.src = 'https://res.cloudinary.com/wqqzwgpl/image/upload/f_auto,q_auto/WhatsApp_Image_2026-08-13_at_15.18.48';
+})();
+</script>
+
+<!-- Turnstile floating widget untuk beranda -->
+<div id="turnstile-beranda-wrap">
+  <p>🔒 Memverifikasi keamanan...</p>
+  <div id="turnstile-beranda-widget"></div>
+</div>
+
+<script>
+(function(){
+  if(!ENABLE_TURNSTILE || !TURNSTILE_SHOW_ON_BERANDA) return;
+
+  // Tampilkan widget 1.5 detik setelah halaman load
+  setTimeout(function(){
+    var wrap = document.getElementById('turnstile-beranda-wrap');
+    if(!wrap) return;
+    wrap.classList.add('ts-show');
+
+    // Tunggu Turnstile siap lalu render
+    var tryRender = setInterval(function(){
+      if(typeof turnstile === 'undefined') return;
+      clearInterval(tryRender);
+      turnstile.render('#turnstile-beranda-widget', {
+        sitekey: TURNSTILE_SITE_KEY,
+        size: 'compact',
+        callback: function(){
+          // Verifikasi berhasil → tunggu 2 detik → fade out
+          setTimeout(function(){
+            wrap.classList.remove('ts-show');
+            wrap.classList.add('ts-hide');
+            setTimeout(function(){ wrap.style.display='none'; }, 500);
+          }, 2000);
+        }
+      });
+    }, 300);
+
+  }, 1500);
 })();
 </script>
 </body>
