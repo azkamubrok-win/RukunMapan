@@ -158,6 +158,7 @@ ul{list-style:none}
   align-items:center;justify-content:center;gap:0;
   transition:opacity .6s ease;
   overflow:hidden;
+  will-change:opacity;
 }
 #loader.out{opacity:0;pointer-events:none}
 
@@ -218,26 +219,41 @@ ul{list-style:none}
   overflow:visible;position:relative;
 }
 .ld-bar-fill{
-  position:absolute;top:0;left:0;height:100%;width:0%;
+  position:absolute;top:0;left:0;height:100%;width:100%;
   background:linear-gradient(90deg,var(--gold),var(--gold-l),#fff8e7,var(--gold-l));
-  background-size:200% 100%;
   border-radius:99px;
-  animation:lb 2.4s cubic-bezier(.25,0,.1,1) .6s forwards, shimmer 1.8s linear .6s infinite;
+  /* scaleX: GPU-composited, zero layout reflow, zero paint */
+  transform:scaleX(0);
+  transform-origin:left center;
+  animation:lb 2.4s cubic-bezier(.25,0,.1,1) .6s forwards;
   box-shadow:0 0 14px rgba(200,150,62,.7), 0 0 28px rgba(200,150,62,.35);
-  will-change:width,background-position;
-  transform:translateZ(0);
+  will-change:transform;
 }
-/* glowing dot at tip */
+/* shimmer — translateX on compositor via ::before; clip-path keeps it inside bar */
+.ld-bar-fill::before{
+  content:'';
+  position:absolute;inset:0;border-radius:99px;
+  background:linear-gradient(90deg,transparent 20%,rgba(255,255,255,.42) 50%,transparent 80%);
+  transform:translateX(-100%);
+  animation:shimmer 1.8s linear .6s infinite;
+  will-change:transform;
+  /* clip shimmer to bar bounds without overflow:hidden blocking ::after */
+  clip-path:inset(0 0 0 0);
+}
+/* glowing dot at right edge — floats outside bar intentionally */
 .ld-bar-fill::after{
-  content:'';position:absolute;right:-4px;top:50%;transform:translateY(-50%);
+  content:'';
+  position:absolute;right:-5px;top:50%;
   width:13px;height:13px;border-radius:50%;
   background:var(--gold-l);
   box-shadow:0 0 10px 4px rgba(232,185,106,.6);
   animation:dotPulse .7s ease-in-out infinite alternate;
+  transform:translateY(-50%);
+  will-change:box-shadow;
 }
 @keyframes dotPulse{from{box-shadow:0 0 8px 3px rgba(232,185,106,.5)}to{box-shadow:0 0 16px 6px rgba(232,185,106,.9)}}
-@keyframes lb{to{width:100%}}
-@keyframes shimmer{from{background-position:100% 0}to{background-position:-100% 0}}
+@keyframes lb{to{transform:scaleX(1)}}
+@keyframes shimmer{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
 
 /* step dots */
 .ld-dots{
@@ -248,6 +264,7 @@ ul{list-style:none}
   width:7px;height:7px;border-radius:50%;
   background:rgba(255,255,255,.22);
   transition:background .3s ease, box-shadow .3s ease;
+  will-change:background,box-shadow;
 }
 .ld-dot.act{background:var(--gold-l);box-shadow:0 0 8px rgba(232,185,106,.7)}
 #ld2{animation:dotAct .3s ease .14s forwards}
